@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloque de colores</title>
+    <style>
+         #bloque{
+            width: 200px;
+            height: 200px;
+        }
+        .rojo{
+            background-color: red;
+        }
+        .amarillo{
+            background-color: yellow;
+        }
+        .azul{
+            background-color: blue;
+        }
+        .verde{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="Bloque de colores"></div>
+    <label for="colores">Elige Color</label>
+    <select name="colores" id="color" onchange="cambiaColor(this.value);"">
+        <option value="rojo">Rojo</option>
+        <option value="verde">Verde</option>
+        <option value="amarillo">Amarillo</option>
+        <option value="azul">Azul</option>
+    </select>
+    <div id="bloque"></div>
+    <script>
+        function cambiaColor(color){
+            console.log(color);
+            
+            var bloque = document.getElementById("bloque")
+            bloque.setAttribute("class",color)
+        }
+    </script>
+</body>
+</html>
